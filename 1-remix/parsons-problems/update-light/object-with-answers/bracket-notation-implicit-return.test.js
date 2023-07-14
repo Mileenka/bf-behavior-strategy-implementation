@@ -3,22 +3,22 @@
 /* this exercise has 1 distractions */
 
 const updateLight = (current) =>
-  ({
-    green: 'yellow',
-    yellow: 'red',
-    red: 'green',
-  }[current]);
+    ({
+        green: 'yellow',
+        yellow: 'red',
+        red: 'green',
+    }[current]);
 
-  describe('updateLight', () => {
+describe('updateLight', () => {
     it('should return the next light color in the sequence', () => {
-      expect(updateLight('green')).toEqual('yellow');
+        expect(updateLight('green')).toEqual('yellow');
     });
-  
+
     it('should return "green" when the current light color is "red"', () => {
-      expect(updateLight('red')).toEqual('green');
+        expect(updateLight('red')).toEqual('green');
     });
-  
+
     it('should return "red" when the current light color is "yellow"', () => {
-      expect(updateLight('yellow')).toEqual('red');
+        expect(updateLight('yellow')).toEqual('red');
     });
-  });
+});

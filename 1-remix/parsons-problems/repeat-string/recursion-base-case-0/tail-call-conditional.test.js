@@ -28,15 +28,14 @@ const repeatString = (text = '', repetitions = 1, repeated = '') => {
 };
 
 describe('repeatString', () => {
-  it('should repeat the text the specified number of times', () => {
-    const result1 = repeatString('abc', 3);
-    expect(result1).toEqual('abcabcabc');
+    it('should repeat the text the specified number of times', () => {
+        const result1 = repeatString('abc', 3);
+        expect(result1).toEqual('abcabcabc');
 
-    const result2 = repeatString('123', 5);
-    expect(result2).toEqual('123123123123123');
+        const result2 = repeatString('123', 5);
+        expect(result2).toEqual('123123123123123');
 
-    const result3 = repeatString('xyz', 0);
-    expect(result3).toEqual('');
-
-  });
+        const result3 = repeatString('xyz', 0);
+        expect(result3).toEqual('');
+    });
 });

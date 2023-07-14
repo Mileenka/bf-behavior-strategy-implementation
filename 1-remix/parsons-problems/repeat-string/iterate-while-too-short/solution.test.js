@@ -9,23 +9,22 @@
 
 const repeatString = (text = '', repetitions = 1) => {
     return Array(repetitions).fill(text).join('');
-  };
-  
-  describe('repeatString', () => {
+};
+
+describe('repeatString', () => {
     it('repeats the text "hello" 3 times', () => {
-      expect(repeatString('hello', 3)).toEqual('hellohellohello');
+        expect(repeatString('hello', 3)).toEqual('hellohellohello');
     });
-  
+
     it('repeats an empty string 5 times', () => {
-      expect(repeatString('', 5)).toEqual('');
+        expect(repeatString('', 5)).toEqual('');
     });
-  
+
     it('repeats the text "abc" 0 times', () => {
-      expect(repeatString('abc', 0)).toEqual('');
+        expect(repeatString('abc', 0)).toEqual('');
     });
-  
+
     it('repeats the text "123" 1 time', () => {
-      expect(repeatString('123', 1)).toEqual('123');
+        expect(repeatString('123', 1)).toEqual('123');
     });
-  });
-  
+});

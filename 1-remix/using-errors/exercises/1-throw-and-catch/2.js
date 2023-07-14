@@ -1,22 +1,22 @@
-"use strict";
+'use strict';
 
-console.log("- broken JS -");
+console.log('- broken JS -');
 try {
-  let name;
-  name.length;
+    let name;
+    name.length;
 } catch (err) {
-  console.error(err);
+    console.error(err);
 }
 
-console.log("- throw new error -");
+console.log('- throw new error -');
 try {
-  throw new TypeError("Cannot read property 'length' of undefined");
+    throw new TypeError("Cannot read property 'length' of undefined");
 } catch (err) {
-  console.error(err);
+    console.error(err);
 
-  console.assert(err.name === "TypeError", "name fail");
-  console.assert(
-    err.message === "Cannot read property 'length' of undefined",
-    "message fail"
-  );
+    console.assert(err.name === 'TypeError', 'name fail');
+    console.assert(
+        err.message === "Cannot read property 'length' of undefined",
+        'message fail',
+    );
 }

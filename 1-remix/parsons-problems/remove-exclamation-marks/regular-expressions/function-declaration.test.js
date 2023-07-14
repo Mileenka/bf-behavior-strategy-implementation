@@ -3,23 +3,25 @@
 /* this exercise has 3 distractors */
 
 function removeExclamationMarks(s) {
-  return s.replace(/!/gi, '');
+    return s.replace(/!/gi, '');
 }
 
 describe('addArrays', () => {
-  it('"hi!" -> "hi"', () => {
-    expect(removeExclamationMarks('hi!')).toEqual('hi');
-  });
+    it('"hi!" -> "hi"', () => {
+        expect(removeExclamationMarks('hi!')).toEqual('hi');
+    });
 
-  it('"Hello there!" -> "Hello there"', () => {
-    expect(removeExclamationMarks('Hello there!')).toEqual('Hello there');
-  });
+    it('"Hello there!" -> "Hello there"', () => {
+        expect(removeExclamationMarks('Hello there!')).toEqual('Hello there');
+    });
 
-  it('"HYF!" -> "HYF"', () => {
-    expect(removeExclamationMarks('HYF!')).toEqual('HYF');
-  });
+    it('"HYF!" -> "HYF"', () => {
+        expect(removeExclamationMarks('HYF!')).toEqual('HYF');
+    });
 
-  it('"Welcome to JS!" -> "Welcome to JS"', () => {
-    expect(removeExclamationMarks('Welcome to JS!')).toEqual('Welcome to JS');
-  });
+    it('"Welcome to JS!" -> "Welcome to JS"', () => {
+        expect(removeExclamationMarks('Welcome to JS!')).toEqual(
+            'Welcome to JS',
+        );
+    });
 });

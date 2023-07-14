@@ -1,5 +1,5 @@
 // you can use this to check the argument
-import { isArrayOfNumbers } from "./utils/is-array-of-numbers.js";
+import { isArrayOfNumbers } from './utils/is-array-of-numbers.js';
 
 /**
  *
@@ -15,8 +15,7 @@ export const numberOfEvens = (numbers = []) => {
     for (let i = 0; i < numbers.length; i++) {
         if (numbers[i] % 2 === 0) {
             isEven++;
-        } 
         }
-        return isEven;
-    };
-
+    }
+    return isEven;
+};

@@ -14,103 +14,103 @@
 // First solution
 
 function casifyText(text = '', lowerCase = true) {
-  if (typeof text !== 'string') {
-    throw new TypeError('text is not a string');
-  }
+    if (typeof text !== 'string') {
+        throw new TypeError('text is not a string');
+    }
 
-  if (typeof lowerCase !== 'boolean') {
-    throw new TypeError('lowerCase is not a boolean');
-  }
+    if (typeof lowerCase !== 'boolean') {
+        throw new TypeError('lowerCase is not a boolean');
+    }
 
-  return lowerCase ? text.toLowerCase() : text.toUpperCase();
+    return lowerCase ? text.toLowerCase() : text.toUpperCase();
 }
 
 // Second solution
 
 function casifyText2(text = '', lowerCase = true) {
-  if (typeof text !== 'string') {
-    throw new TypeError('text is not a string');
-  }
+    if (typeof text !== 'string') {
+        throw new TypeError('text is not a string');
+    }
 
-  if (typeof lowerCase !== 'boolean') {
-    throw new TypeError('lowerCase is not a boolean');
-  }
+    if (typeof lowerCase !== 'boolean') {
+        throw new TypeError('lowerCase is not a boolean');
+    }
 
-  let casifiedText = '';
+    let casifiedText = '';
 
-  for (let i = 0; i < text.length; i++) {
-    const char = text[i];
-    casifiedText += lowerCase ? char.toLowerCase() : char.toUpperCase();
-  }
+    for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        casifiedText += lowerCase ? char.toLowerCase() : char.toUpperCase();
+    }
 
-  return casifiedText;
+    return casifiedText;
 }
 
 for (const solution of [secretSolution, casifyText, casifyText2]) {
-  describe(solution.name + ': sets a text to lower or upper case', () => {
-    describe("the function's default parameters", () => {
-      it('second parameter defaults to true', () => {
-        expect(solution('asdf')).toEqual('asdf');
-      });
-      it('first parameter defaults to an empty string', () => {
-        expect(solution()).toEqual('');
-      });
-    });
+    describe(solution.name + ': sets a text to lower or upper case', () => {
+        describe("the function's default parameters", () => {
+            it('second parameter defaults to true', () => {
+                expect(solution('asdf')).toEqual('asdf');
+            });
+            it('first parameter defaults to an empty string', () => {
+                expect(solution()).toEqual('');
+            });
+        });
 
-    // write the tests indicated by the comments
-    describe('when set to lower case', () => {
-      // when the text is an empty string
-      it('when the text is an empty string', () => {
-        expect(solution('')).toEqual('');
-      });
-      // when the text is all upper case
-      it('when the text is all upper case', () => {
-        expect(solution('CODE', true)).toEqual('code');
-      });
-      // when the text is all lower case
-      it('when the text is all lower case', () => {
-        expect(solution('character', true)).toEqual('character');
-      });
-      // when the text is mixed upper and lower case
-      it('when the text is mixed upper and lower case', () => {
-        expect(solution('MaNgO', true)).toEqual('mango');
-      });
-      // when the text contains punctuation
-      it('when the text contains punctuation', () => {
-        expect(solution('document.', true)).toEqual('document.');
-      });
-      // when the text contains numbers
-      it('when the text contains numbers', () => {
-        expect(solution('hi5', true)).toEqual('hi5');
-      });
+        // write the tests indicated by the comments
+        describe('when set to lower case', () => {
+            // when the text is an empty string
+            it('when the text is an empty string', () => {
+                expect(solution('')).toEqual('');
+            });
+            // when the text is all upper case
+            it('when the text is all upper case', () => {
+                expect(solution('CODE', true)).toEqual('code');
+            });
+            // when the text is all lower case
+            it('when the text is all lower case', () => {
+                expect(solution('character', true)).toEqual('character');
+            });
+            // when the text is mixed upper and lower case
+            it('when the text is mixed upper and lower case', () => {
+                expect(solution('MaNgO', true)).toEqual('mango');
+            });
+            // when the text contains punctuation
+            it('when the text contains punctuation', () => {
+                expect(solution('document.', true)).toEqual('document.');
+            });
+            // when the text contains numbers
+            it('when the text contains numbers', () => {
+                expect(solution('hi5', true)).toEqual('hi5');
+            });
+        });
+        describe('when set to upper case', () => {
+            // when the text is an empty string
+            it('when the text is an empty string', () => {
+                expect(solution('')).toEqual('');
+            });
+            // when the text is all upper case
+            it('when the text is all upper case', () => {
+                expect(solution('FALSE', false)).toEqual('FALSE');
+            });
+            // when the text is all lower case
+            it('when the text is all lower case', () => {
+                expect(solution('true', false)).toEqual('TRUE');
+            });
+            // when the text is mixed upper and lower case
+            it('when the text is mixed upper and lower case', () => {
+                expect(solution('RabbiT', false)).toEqual('RABBIT');
+            });
+            // when the text contains punctuation
+            it('when the text contains punctuation', () => {
+                expect(solution('.TOUPPERCASE', false)).toEqual('.TOUPPERCASE');
+            });
+            // when the text contains numbers
+            it('when the text contains numbers', () => {
+                expect(solution('1IT1', false)).toEqual('1IT1');
+            });
+        });
     });
-    describe('when set to upper case', () => {
-      // when the text is an empty string
-      it('when the text is an empty string', () => {
-        expect(solution('')).toEqual('');
-      });
-      // when the text is all upper case
-      it('when the text is all upper case', () => {
-        expect(solution('FALSE', false)).toEqual('FALSE');
-      });
-      // when the text is all lower case
-      it('when the text is all lower case', () => {
-        expect(solution('true', false)).toEqual('TRUE');
-      });
-      // when the text is mixed upper and lower case
-      it('when the text is mixed upper and lower case', () => {
-        expect(solution('RabbiT', false)).toEqual('RABBIT');
-      });
-      // when the text contains punctuation
-      it('when the text contains punctuation', () => {
-        expect(solution('.TOUPPERCASE', false)).toEqual('.TOUPPERCASE');
-      });
-      // when the text contains numbers
-      it('when the text contains numbers', () => {
-        expect(solution('1IT1', false)).toEqual('1IT1');
-      });
-    });
-  });
 }
 
 // minified solution for testing your tests

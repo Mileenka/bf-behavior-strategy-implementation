@@ -1,5 +1,5 @@
 // you can use this to check the argument
-import { isArrayOfNumbers } from "./utils/is-array-of-numbers.js";
+import { isArrayOfNumbers } from './utils/is-array-of-numbers.js';
 
 /**
  *

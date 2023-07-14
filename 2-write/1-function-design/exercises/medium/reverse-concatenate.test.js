@@ -9,50 +9,52 @@
 
 // First solution
 const concatStrings = (arrayOfStrings) => {
-  const arrCopy = [...arrayOfStrings];
-  return arrCopy.reverse().join('');
+    const arrCopy = [...arrayOfStrings];
+    return arrCopy.reverse().join('');
 };
 
 // Second solution
 const concatStrings2 = (arrayOfStrings2) => {
-  return arrayOfStrings2.reduce((result, str) => str + result, '');
+    return arrayOfStrings2.reduce((result, str) => str + result, '');
 };
 const mySolutions = [concatStrings, concatStrings2];
 // -------- your solutions --------
 
 for (const solution of mySolutions) {
-  describe(solution.name + ': concatStrings', () => {
-    describe('concatenate strings and reverse order', () => {
-      it("['hello', 'there'] --> 'therehello'", () => {
-        expect(solution(['hello', 'there'])).toEqual('therehello');
-      });
-      it("['Hack', 'your', 'future'] --> 'futureyourHack'", () => {
-        expect(solution(['Hack', 'your', 'future'])).toEqual('futureyourHack');
-      });
-      it("['Life', 'is', 'beautiful'] --> 'beautifulisLife'", () => {
-        expect(solution(['Life', 'is', 'beautiful'])).toEqual(
-          'beautifulisLife',
-        );
-      });
-      it("['4', '83', '12'] --> '12834'", () => {
-        expect(solution(['4', '83', '12'])).toEqual('12834');
-      });
-      it("['H', 'Y', 'F'] --> 'FYH'", () => {
-        expect(solution(['H', 'Y', 'F'])).toEqual('FYH');
-      });
-      it("['Dont', 'worry'] --> 'worryDont'", () => {
-        expect(solution(['Dont', 'worry'])).toEqual('worryDont');
-      });
-      it("['Be', 'happy'] --> 'happyBe'", () => {
-        expect(solution(['Be', 'happy'])).toEqual(
-          'happyBe',
-        );
-      });
-      it("['apple', 'banana', 'peach'] --> 'peachbananaapple'", () => {
-        expect(solution(['apple', 'banana', 'peach'])).toEqual('peachbananaapple');
-      });
+    describe(solution.name + ': concatStrings', () => {
+        describe('concatenate strings and reverse order', () => {
+            it("['hello', 'there'] --> 'therehello'", () => {
+                expect(solution(['hello', 'there'])).toEqual('therehello');
+            });
+            it("['Hack', 'your', 'future'] --> 'futureyourHack'", () => {
+                expect(solution(['Hack', 'your', 'future'])).toEqual(
+                    'futureyourHack',
+                );
+            });
+            it("['Life', 'is', 'beautiful'] --> 'beautifulisLife'", () => {
+                expect(solution(['Life', 'is', 'beautiful'])).toEqual(
+                    'beautifulisLife',
+                );
+            });
+            it("['4', '83', '12'] --> '12834'", () => {
+                expect(solution(['4', '83', '12'])).toEqual('12834');
+            });
+            it("['H', 'Y', 'F'] --> 'FYH'", () => {
+                expect(solution(['H', 'Y', 'F'])).toEqual('FYH');
+            });
+            it("['Dont', 'worry'] --> 'worryDont'", () => {
+                expect(solution(['Dont', 'worry'])).toEqual('worryDont');
+            });
+            it("['Be', 'happy'] --> 'happyBe'", () => {
+                expect(solution(['Be', 'happy'])).toEqual('happyBe');
+            });
+            it("['apple', 'banana', 'peach'] --> 'peachbananaapple'", () => {
+                expect(solution(['apple', 'banana', 'peach'])).toEqual(
+                    'peachbananaapple',
+                );
+            });
+        });
     });
-  });
 }
 
 // minified solution for testing your tests

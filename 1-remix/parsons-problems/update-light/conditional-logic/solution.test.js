@@ -1,9 +1,10 @@
 function updateLight(current) {
-
-    return current === 'yellow' ? 'red' : current === 'green' ? 'yellow' : 'green';
-
+    return current === 'yellow'
+        ? 'red'
+        : current === 'green'
+        ? 'yellow'
+        : 'green';
 }
-
 
 describe('updateLight', () => {
     it('should return the next light color in the sequence', () => {
