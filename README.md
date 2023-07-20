@@ -561,7 +561,10 @@ These 4 columns may be helpful:
 
 - [Day1](https://youtu.be/t5P_uwegFYA)
 - [Day2](https://youtu.be/iM79nq2xNhw)
+- [Day5](https://youtu.be/eyievXSQdIA)
 
 ### Week2
 
+- [Day7](https://youtu.be/x1UWrLVYKCM)
+- [Day8](https://youtu.be/9Y0URHORUI8)
 </details>
